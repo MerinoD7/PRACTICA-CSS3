@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora 2 Saul</title>
+</head>
+<body>
+    <div>
+<h1> Calculadora Sencilla </h1>
+
+        <form name="Calculadora2" style="text-align: left; margin-left: auto; margin-right: auto;">
+            
+            <label for="primero">Ingrese Valor A</label>
+            <input type="number" name="primero" required="required" >
+            <br>
+            <br>
+            <label for="segundo">Ingrese Valor B</label>
+            <input type="number" name="segundo" required="required" >
+    <br>
+    <br>
+    <input value="Suma" type="button" onclick="suma1();">
+    <input value="Procesar Multiplicacion" type="button" onclick="multiplicacion();">
+    <input value="Procesar Division" type="button" onclick="division();">
+    <input type="reset">
+    <br>
+    <br>
+    <label for="resultado">Resultado</label>
+    <input type="number" name="resultado">
+        </form>
+    </div>
+    
+    <script>
+    function suma1()
+    {
+    let primero; 
+    let segundo;
+    let suma;
+        
+    primero = parseFloat (document.Calculadora2.primero.value);
+    segundo = parseFloat (document.Calculadora2.segundo.value);
+     
+    suma = primero+segundo;
+    
+    document.Calculadora2.resultado.value = suma;
+    }
+    
+    </script>
+    <script>
+        function multiplicacion()
+        {
+            let primero; 
+            let segundo;
+            let multiplicar;
+        
+        primero = parseFloat (document.Calculadora2.primero.value);
+        segundo = parseFloat (document.Calculadora2.segundo.value);
+     
+    multiplicar = primero*segundo;
+    
+    document.Calculadora2.resultado.value = multiplicar;
+        }
+    </script>
+<script>
+    function division()
+    {
+      let primero; 
+      let segundo;
+      let division;
+        
+    primero = parseFloat (document.Calculadora2.primero.value);
+    segundo = parseFloat (document.Calculadora2.segundo.value);
+     
+    if(segundo==0){
+        (division=0);
+    }
+    else{
+        (division=primero/segundo);
+}
+    document.Calculadora2.resultado.value = division;
+}
+
+</script>
+
+</body>
+</html>

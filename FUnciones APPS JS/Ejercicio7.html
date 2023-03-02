@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <form name="prome">
+    <h1>Calcula tu Promedio</h1>
+    <br>
+    <label for="nota1">Ingrese su Nota 1</label>
+    <input type="number" name="nota1" required="required">
+    <br>
+    <label for="nota2">Ingrese su Nota 2</label>
+    <input type="number" name="nota2" required="required">
+    <br>
+    <label for="nota3">Ingrese su Nota 3</label>
+    <input type="number" name="nota3" required="required">
+    <br>
+    <br>
+    <input value="Calcular Promedio" type="button" onclick="promedio();">
+    <br>
+    <br>
+    <input type="number"  name="fin">
+</form>
+<script>
+    function promedio()
+    {
+      let nota1;
+      let nota2;
+      let nota3;
+      let pro;
+      
+      nota1 = parseFloat(document.prome.nota1.value);
+      nota2 = parseFloat(document.prome.nota2.value);
+      nota3 = parseFloat(document.prome.nota3.value);
+
+      pro = parseInt(nota1+nota2+nota3)/3;
+
+      document.prome.fin.value = pro;
+
+      if(pro=>6){
+        alert("Felicidades Aprobaste la Materia" + pro);
+      }
+      else{
+        alert("No aprobaste la materia" + pro);
+      }
+        
+    }
+</script>
+
+</body>
+</html>

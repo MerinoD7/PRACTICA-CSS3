@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <script>
+        const array = [4,22,6,12,18,45,65,67,78,3];
+let contador = 0;
+
+array.forEach(value => {
+    if(value >= 18){
+        contador++;
+        console.log(value);
+    }
+})
+console.log("Total de personas mayores de edad: " + contador);
+
+const array2 = [4,22,6,12,18,45,65,67,78,3];
+let contadorm = 0;
+
+array2.forEach(value => {
+    if(value < 18){
+        contadorm++;
+        console.log(value);
+    }
+})
+console.log("Total de Personas Menores de edad:" + contadorm);
+
+    </script>
+</body>
+</html>

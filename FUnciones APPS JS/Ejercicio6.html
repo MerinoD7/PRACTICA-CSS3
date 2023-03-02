@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./CSS/bootstrap.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>Suma, resta, multiplicación y división</title>
+</head>
+    <body>
+        <main>
+        <form name="formulario1">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;">
+               <center> <h1>Calculadora Sencilla</h1></center>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="a">Ingresa el valor de a:</label>
+                        </td>
+                        <td>
+                            <input name="a" required="required"  type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="b">Ingresa el valor de b:</label>
+                        </td>
+                        <td>
+                            <input name="b" required="required"  type="number">
+                        </td>
+                    </tr>
+                    <br>
+                   <center><tr>
+                        <td >
+                            <input value="Procesar" type="button" onclick="calcular();">
+                            <input type="reset">
+                        </td>
+                        <br>
+                    </tr></center> 
+                    <tr>
+                        <td>
+                            <label for="division">Valor de division:</label>
+                        </td>
+                        <td>
+                            <input name="division"  type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="multiplicacion">Valor de multiplicacion:</label>
+                        </td>
+                        <td>
+                            <input name="multiplicacion" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="resta">Valor de resta:</label>
+                        </td>
+                        <td>
+                            <input name="resta" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="suma">Valor de suma:</label>
+                        </td>
+                        <td>
+                            <input name="suma"  type="number">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <script>
+ 
+function calcular()
+{
+    let a, b;
+    let division, multiplicacion, resta;
+    let suma;
+
+    a = parseFloat (document.formulario1.a.value);
+    b = parseFloat (document.formulario1.b.value);
+
+    suma = a+b;
+    resta = a-b;
+    multiplicacion = a*b;
+    
+    if(b==0){
+        (division=0);
+    }
+    else{
+        (division=a/b);
+    }
+    document.formulario1.division.value = division;
+    document.formulario1.multiplicacion.value = multiplicacion;
+    document.formulario1.resta.value = resta;
+    document.formulario1.suma.value = suma;
+}
+ 
+        </script>
+        </main>
+
+    </body>
+</html>
